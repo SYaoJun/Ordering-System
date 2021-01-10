@@ -10,7 +10,7 @@
 - 订单详情表
 ```
 create table `product_info`(
-	`product_id` varchar(32) not null, 
+  `product_id` varchar(32) not null, 
   `product_name` varchar(64) not null comment '商品名称',
   `product_price` decimal(8,2) not null comment '单价',
   `product_stock` int no t null comment '库存',
@@ -24,7 +24,7 @@ create table `product_info`(
 )comment '商品表';
 
 create table `product_category`(
-	`category_id` int not null auto_increment, 
+  `category_id` int not null auto_increment, 
   `category_name` varchar(64) not null comment '类目名称',
   `category_type` int not null comment '类目编号',
   `create_time` timestamp not null default current_timestamp comment '创建时间',
@@ -34,7 +34,7 @@ create table `product_category`(
 )comment '类目表';
 
 create table `order_master`(
-	`order_id` varchar(32) not null, 
+  `order_id` varchar(32) not null, 
   `buyer_name` varchar(32) not null comment '买家姓名',
   `buyer_phone` varchar(32) not null comment '买家电话',
   `buyer_address` varchar(128) not null comment '买家地址',
@@ -51,7 +51,7 @@ create table `order_master`(
 
 create table `order_detail`(
   `detail_id` varchar(32) not null, 
-	`order_id` varchar(32) not null, 
+  `order_id` varchar(32) not null, 
   `product_id` varchar(32) not null, 
   `product_name` varchar(64) not null comment '商品名称',
   `product_price` decimal(8,2) not null comment '商品价格',
